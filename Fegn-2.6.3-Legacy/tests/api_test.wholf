@@ -1,0 +1,27 @@
+// API entegrasyonu testleri
+test "API entegrasyonu testi" {
+    // API isteği
+    fegn Api {
+        // GET isteği testi
+        get: ("/users") => {
+            assert true
+        },
+        
+        // POST isteği testi
+        post: ("/users", {
+            name: "Ahmet",
+            email: "ahmet@example.com"
+        }) => {
+            assert true
+        }
+    }
+    
+    // Kullanıcıları al
+    Api.get("/users")
+    
+    // Yeni kullanıcı ekle
+    Api.post("/users", {
+        name: "Ahmet",
+        email: "ahmet@example.com"
+    })
+}

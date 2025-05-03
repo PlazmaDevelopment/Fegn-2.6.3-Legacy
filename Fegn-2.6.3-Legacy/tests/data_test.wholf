@@ -1,0 +1,43 @@
+// Veri yönetimi testleri
+test "Veri yönetimi testi" {
+    // Veri yönetimi
+    fegn Data {
+        // Veri ekle testi
+        add: ("users", {
+            name: "Ahmet",
+            email: "ahmet@example.com"
+        }) => {
+            assert true
+        },
+        
+        // Veri al testi
+        get: ("users", {
+            email: "ahmet@example.com"
+        }) => {
+            assert true
+        },
+        
+        // Veri sil testi
+        remove: ("users", {
+            email: "ahmet@example.com"
+        }) => {
+            assert true
+        }
+    }
+    
+    // Kullanıcı ekle
+    Data.add("users", {
+        name: "Ahmet",
+        email: "ahmet@example.com"
+    })
+    
+    // Kullanıcı al
+    Data.get("users", {
+        email: "ahmet@example.com"
+    })
+    
+    // Kullanıcı sil
+    Data.remove("users", {
+        email: "ahmet@example.com"
+    })
+}

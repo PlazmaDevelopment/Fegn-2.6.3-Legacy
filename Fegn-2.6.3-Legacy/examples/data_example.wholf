@@ -1,0 +1,42 @@
+// Veri yönetimi örneği
+
+// Veri yönetimi
+fegn Data {
+    // Veri ekle
+    add: ("users", {
+        name: "Ahmet",
+        email: "ahmet@example.com"
+    }) => {
+        Console.log("Kullanıcı eklendi")
+    },
+    
+    // Veri al
+    get: ("users", {
+        email: "ahmet@example.com"
+    }) => {
+        Console.log("Kullanıcı bulundu")
+    },
+    
+    // Veri sil
+    remove: ("users", {
+        email: "ahmet@example.com"
+    }) => {
+        Console.log("Kullanıcı silindi")
+    }
+}
+
+// Kullanıcı ekle
+Data.add("users", {
+    name: "Ahmet",
+    email: "ahmet@example.com"
+})
+
+// Kullanıcı al
+Data.get("users", {
+    email: "ahmet@example.com"
+})
+
+// Kullanıcı sil
+Data.remove("users", {
+    email: "ahmet@example.com"
+})

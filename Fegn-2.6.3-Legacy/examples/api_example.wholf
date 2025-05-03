@@ -1,0 +1,26 @@
+// API entegrasyonu örneği
+
+// API isteği
+fegn Api {
+    // GET isteği
+    get: ("/users") => {
+        Console.log("Kullanıcılar alındı")
+    },
+    
+    // POST isteği
+    post: ("/users", {
+        name: "Ahmet",
+        email: "ahmet@example.com"
+    }) => {
+        Console.log("Kullanıcı eklendi")
+    }
+}
+
+// Kullanıcıları al
+Api.get("/users")
+
+// Yeni kullanıcı ekle
+Api.post("/users", {
+    name: "Ahmet",
+    email: "ahmet@example.com"
+})
